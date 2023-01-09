@@ -109,7 +109,7 @@ def main():
     elif args.perturb_alpha == 'random':
         perturb_alpha = Random_alpha
     
-    api = API('/remote-home/share/share/dataset/NAS-Bench-201-v1_0-e61699.pth')
+    api = API('../NAS-Bench-201-v1_1-096897.pth')
     criterion = nn.CrossEntropyLoss()
     criterion = criterion.cuda()
     model = Network(C=args.init_channels, N=5, max_nodes=4, num_classes=n_classes, criterion=criterion)  # N=5/1/3
